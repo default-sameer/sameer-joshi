@@ -1,19 +1,46 @@
-import type { NextPage } from 'next'
+import { NextSeo } from "next-seo"
+import Ticker from "../components/assets/ticker";
 
+const url = 'https://sameer-joshi.com.np';
+const title = 'Home | Sameer Joshi';
+const description = `Full Stack Developer in Making.`;
 
-const Home: NextPage = () => {
+const Home = () : JSX.Element => {
   return (
    <>
-      <div className="font-syne">
-        <h1 className="text-center text-2xl sm:text-5xl sm:pt-20 pt-10 font-bold">Hello from NextJs, Typescript, Tailwind and DaisyUi</h1>
-        <div className="flex flex-col container max-w-sm mx-auto sm:max-w-lg">
-          <p className="text-center p-5">Get Started by cloning the repo</p>
-          <div className="mockup-code">
-            <pre data-prefix="$"><code>git clone https://github.com/default-sameer/nextjs-typescript-tailwind-starter-template.git</code></pre>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+          }}
+        />
+        <div className="relative z-0" style={{ minHeight: '65vh' }}>
+          <div
+            className={`mx-auto max-w-5xl relative flex flex-col justify-center`}
+            style={{ minHeight: '65vh' }}
+          >
+              <div className="front-layer top-0 right-0 flex flex-col justify-center items-center w-full h-full dark:text-white">
+                <Ticker
+                  textItems={[
+                    'Python',
+                    'NextJS',
+                    'Javascript',
+                    'Typescript',
+                    'NodeJS',
+                    'Express',
+                    'Flask',
+                    'FastApi',
+                    'Linux',
+                  ]}
+                />
+              </div>
           </div>
-          <p className="text-center p-5">and editing <code>index.tsx</code></p>
         </div>
-      </div>
+
    </>
   )
 }

@@ -24,8 +24,8 @@ const projects=[
     },
     {
         title: 'Ncc Bim Api',
-        description: 'Browse Trending Movies and Tv Shows',
-        url: 'https://moviebox-tmdb.herokuapp.com',
+        description: 'Api to Get BIm Student Details of My College',
+        url: 'https://https://ncc-bim.herokuapp.com/docs',
     },
 ]
 

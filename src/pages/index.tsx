@@ -36,6 +36,7 @@ const Home = () : JSX.Element => {
                     'FastApi',
                     'Linux',
                   ]}
+                  
                 />
               </div>
           </div>
